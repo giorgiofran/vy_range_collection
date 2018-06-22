@@ -1,18 +1,18 @@
 name: vy_range_collection
 description: A collection library for range.
-version: 0.2.0
+version: 0.3.0
 authors:
 - Kwang Yul Seo <kwangyul.seo@gmail.com>
 - Giorgio Franceschetti<giorgiofran@gmail.com>
 homepage: https://github.com/giorgiofran/vy_range_collection
 
 environment:
-  sdk: '>=1.24.2 <2.0.0'
+  sdk: '>=2.0.0-dev.55.0 <2.0.0'
 
 dependencies:
-  interval_skip_list: ">=0.0.3 <0.1.0"
-  quiver_check: '>=1.0.0<1.1.0'
-  quiver_iterables: '>=1.0.0<1.1.0'
+  interval_skip_list: any
+  quiver_check: any
+  quiver_iterables: any
 
 dev_dependencies:
-  test: '>=0.12.0 <0.13.0'
+  test: ^0.12.30

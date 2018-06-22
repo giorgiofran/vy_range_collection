@@ -94,8 +94,8 @@ class SkipListRangeSet<C extends Comparable> extends IterableBase<Range<C>>
   @override
   bool encloses(Range<C> range) {
     checkNotNull(range);
-    return _list.findContaining([range.lowerBound, range.upperBound])
-        .isNotEmpty;
+    return _list
+        .findContaining([range.lowerBound, range.upperBound]).isNotEmpty;
   }
 
   @override
@@ -132,13 +132,13 @@ class SkipListRangeSet<C extends Comparable> extends IterableBase<Range<C>>
   }
 
   @override
-  void clear() {
-    _list.clear();
-  }
+  void clear() => _list.clear();
 }
 
-dynamic _max(Iterable i, [Comparator compare = Comparable.compare]) =>
+dynamic _max(Iterable i,
+        [Comparator<Comparable> compare = Comparable.compare]) =>
     i.isEmpty ? null : i.reduce((a, b) => compare(a, b) > 0 ? a : b);
 
-dynamic _min(Iterable i, [Comparator compare = Comparable.compare]) =>
+dynamic _min(Iterable i,
+        [Comparator<Comparable> compare = Comparable.compare]) =>
     i.isEmpty ? null : i.reduce((a, b) => compare(a, b) < 0 ? a : b);
